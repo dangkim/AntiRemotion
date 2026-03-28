@@ -305,11 +305,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh picks up crayons and scribbles a rainbow quickly.",
-      "camera_movement": "Fast-paced montage cuts / Close-ups",
+      "action": "Minh picks up crayons and draws a rainbow with joyful energy.",
+      "camera_movement": "Medium close-up, focusing on the drawing and Minh's happy face",
       "dialogue": "Crayons: For COLOR!",
-      "mood": "Excited and fast",
-      "veo_prompt": "Pixar-style 3D animation, medium close-up of a 6-year-old boy quickly scribbling a vibrant rainbow with different colored crayons on a white paper, fast and energetic movement, classroom art supply table, 8 seconds",
+      "mood": "Joyful and enthusiastic",
+      "veo_prompt": "Pixar-style 3D animation, medium close-up of a cheerful 6-year-old Vietnamese boy with short straight black hair and a light blue school uniform, he is happily and enthusiastically drawing a vibrant rainbow with different colored crayons on a white paper, big joyful smile, bright and colorful art classroom, 8 seconds",
       "dialogue_vn": "Bút màu sáp: Để tạo ra MÀU SẮC!"
     },
     {
