@@ -39,6 +39,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 import requests
+import base64
 
 
 # ── Config loading (.env) ─────────────────────────────────────────────────────
@@ -103,15 +104,16 @@ GET_HEADERS = {"Authorization": f"Bearer {KIE_API_TOKEN}"}
 
 # ── Tunable settings ──────────────────────────────────────────────────────────
 
-COMPOSITE_MAX_WORKERS = 5    # parallel composite jobs (Phase 1)
-VIDEO_MAX_WORKERS     = 5    # parallel video jobs (Phase 2)
+COMPOSITE_MAX_WORKERS = 2    # Parallel composite jobs (Reduced for reliability)
+VIDEO_MAX_WORKERS     = 2    # Parallel video jobs (Reduced for reliability)
 
-POLL_INTERVAL         = 5    # seconds between polls
-MAX_POLLS             = 120  # max wait: 120 × 5s = 10 minutes per task
+POLL_INTERVAL_START   = 15   # Seconds between first few polls
+POLL_INTERVAL_STEP    = 5    # Increase interval by this much after every 5 polls
+MAX_POLLS             = 60   # Max polls (60 × ~20s avg = 20 minutes per task)
 
 # grok-imagine/image-to-video settings
 VIDEO_ASPECT_RATIO     = "16:9"       # "16:9", "9:16", "1:1", "4:3", "3:4", "3:2", "2:3", "auto"
-VIDEO_DURATION         = 6            # duration in seconds (1-15)
+VIDEO_DURATION         = "6"          # duration must be a string for grok-imagine/image-to-video
 VIDEO_RESOLUTION       = "720p"       # "720p" or "480p"
 
 
@@ -131,26 +133,40 @@ def fmt_elapsed(start: float) -> str:
 # ── Shared Jobs API helpers ───────────────────────────────────────────────────
 
 def submit_job(model: str, input_payload: dict) -> tuple:
-    """Submit any kie.ai job. Returns (task_id, None) or (None, error_str)."""
+    """Submit any kie.ai job with up to 3 retries for transient errors."""
     payload = {"model": model, "input": input_payload}
-    try:
-        resp   = requests.post(JOBS_CREATE_URL, headers=POST_HEADERS, json=payload, timeout=30)
-        result = resp.json()
-        if result.get("code") != 200:
-            return None, result.get("msg", "Unknown API error")
-        return result["data"]["taskId"], None
-    except Exception as e:
-        return None, str(e)
+    for attempt in range(1, 4):
+        try:
+            resp   = requests.post(JOBS_CREATE_URL, headers=POST_HEADERS, json=payload, timeout=30)
+            result = resp.json()
+            if result.get("code") != 200:
+                msg = result.get("msg", "Unknown API error")
+                if "internal" in msg.lower() or "busy" in msg.lower():
+                    tprint(f"    [submit] transient error ({msg}), retrying in {attempt*5}s...")
+                    time.sleep(attempt * 5)
+                    continue
+                return None, msg
+            return result["data"]["taskId"], None
+        except Exception as e:
+            if attempt < 3:
+                time.sleep(attempt * 5)
+                continue
+            return None, str(e)
+    return None, "Failed after 3 submission attempts"
 
 
 def poll_job(task_id: str, label: str) -> tuple:
-    """Poll a Jobs API task by taskId until done. Returns (result_url, None) or (None, error_str).
-
-    Used for Phase 1 composite images (flux-2/pro-image-to-image).
-    """
+    """Poll a Jobs API task by taskId until done with adaptive backoff."""
     params = {"taskId": task_id}
+    current_interval = POLL_INTERVAL_START
+    
     for attempt in range(1, MAX_POLLS + 1):
-        time.sleep(POLL_INTERVAL)
+        time.sleep(current_interval)
+        
+        # Adaptive backoff: increase interval every 5 attempts
+        if attempt % 5 == 0 and current_interval < 60:
+            current_interval += POLL_INTERVAL_STEP
+            
         try:
             resp  = requests.get(JOBS_STATUS_URL, headers=GET_HEADERS, params=params, timeout=30)
             data  = resp.json().get("data", {})
@@ -169,26 +185,51 @@ def poll_job(task_id: str, label: str) -> tuple:
                 return None, data.get("failMsg", "Job failed (no reason given)")
 
             else:
-                # Log progress every 30 seconds
-                elapsed_s = attempt * POLL_INTERVAL
-                if elapsed_s % 30 == 0:
-                    tprint(f"    [{label}] {state or 'waiting'} — {elapsed_s}s elapsed...")
+                tprint(f"    [{label}] {state or 'waiting'} (attempt {attempt}, next poll in {current_interval}s)")
 
         except Exception as e:
             tprint(f"    [{label}] poll error: {e}")
 
-    timeout_s = MAX_POLLS * POLL_INTERVAL
-    return None, f"Timed out after {timeout_s // 60}m{timeout_s % 60:02d}s"
+    return None, f"Timed out after {attempt} polls"
 
 
 def download_file(url: str, output_path: Path) -> bool:
+    """Download file with 3 retries for transient network issues."""
+    for attempt in range(1, 4):
+        try:
+            resp = requests.get(url, timeout=120)
+            resp.raise_for_status()
+            output_path.write_bytes(resp.content)
+            if output_path.stat().st_size > 0:
+                return True
+        except Exception as e:
+            if attempt < 3:
+                tprint(f"    Download attempt {attempt} failed ({e}), retrying...")
+                time.sleep(attempt * 5)
+            else:
+                tprint(f"    Download failed after 3 attempts: {e}")
+    return False
+
+
+def upload_to_imgbb(local_path: Path, api_key: str) -> str:
+    """Upload local PNG to imgbb. Returns public_url or None."""
     try:
-        resp = requests.get(url, timeout=120)
-        output_path.write_bytes(resp.content)
-        return output_path.stat().st_size > 0
+        url = "https://api.imgbb.com/1/upload"
+        with open(local_path, "rb") as f:
+            b64 = base64.b64encode(f.read()).decode("utf-8")
+        resp = requests.post(
+            url,
+            params={"key": api_key},
+            data={"image": b64},
+            timeout=60,
+        )
+        result = resp.json()
+        if result.get("success"):
+            return result["data"]["url"]
+        return None
     except Exception as e:
-        tprint(f"    Download failed: {e}")
-        return False
+        tprint(f"    Upload failed: {e}")
+        return None
 
 
 # ── Phase 1 worker: composite image ──────────────────────────────────────────
@@ -351,40 +392,57 @@ def main():
     results        = {"success": [], "failed": [], "skipped": skipped}
     composite_urls = {}   # shot_id → composite_url (filled in Phase 1)
 
-    # ── Phase 1: Composites ────────────────────────────────────────────────────
+    # ── Phase 1: Composites ───────────────────────────────────────────────────
     p1_start = time.time()
 
     if args.shot:
         # Single shot — run directly, no thread pool needed
-        print(f"Phase 1 — Composite: generating {args.shot}...\n")
-        sid, url, err = run_composite(
-            pending[0], bg_map, char_map,
-            Path("composites") / f"{args.shot}.png",
-        )
-        if url:
-            composite_urls[sid] = url
+        composite_file = Path("composites") / f"{args.shot}.png"
+        if composite_file.exists():
+            print(f"  [{args.shot}] composite already exists — skipping generation.")
+            composite_urls[args.shot] = "local" # Sentinel to indicate it's already there
         else:
-            print(f"  [{sid}] composite FAILED: {err}")
-            results["failed"].append(sid)
+            print(f"Phase 1 — Composite: generating {args.shot}...\n")
+            sid, url, err = run_composite(
+                pending[0], bg_map, char_map,
+                composite_file,
+            )
+            if url:
+                composite_urls[sid] = url
+            else:
+                print(f"  [{sid}] composite FAILED: {err}")
+                results["failed"].append(sid)
     else:
-        # Bulk — all composites in parallel
-        print(f"Phase 1 — Composites: submitting {len(pending)} jobs in parallel...\n")
-        with ThreadPoolExecutor(max_workers=COMPOSITE_MAX_WORKERS) as ex:
-            futures = {
-                ex.submit(
-                    run_composite,
-                    shot, bg_map, char_map,
-                    Path("composites") / f"{shot['shot_id']}.png"
-                ): shot["shot_id"]
-                for shot in pending
-            }
-            for future in as_completed(futures):
-                sid, url, err = future.result()
-                if url:
-                    composite_urls[sid] = url
-                else:
-                    tprint(f"  [{sid}] composite FAILED: {err}")
-                    results["failed"].append(sid)
+        # Bulk — all composites in parallel (skip existing)
+        to_generate = []
+        for shot in pending:
+            sid = shot["shot_id"]
+            composite_file = Path("composites") / f"{sid}.png"
+            if composite_file.exists():
+                composite_urls[sid] = "local"
+            else:
+                to_generate.append(shot)
+        
+        if to_generate:
+            print(f"Phase 1 — Composites: submitting {len(to_generate)} jobs in parallel...\n")
+            with ThreadPoolExecutor(max_workers=COMPOSITE_MAX_WORKERS) as ex:
+                futures = {
+                    ex.submit(
+                        run_composite,
+                        shot, bg_map, char_map,
+                        Path("composites") / f"{shot['shot_id']}.png"
+                    ): shot["shot_id"]
+                    for shot in to_generate
+                }
+                for future in as_completed(futures):
+                    sid, url, err = future.result()
+                    if url:
+                        composite_urls[sid] = url
+                    else:
+                        tprint(f"  [{sid}] composite FAILED: {err}")
+                        results["failed"].append(sid)
+        else:
+            print("Phase 1 — Composites: All required composites already exist.")
 
     print(f"\nPhase 1 done in {fmt_elapsed(p1_start)}: "
           f"{len(composite_urls)}/{len(pending)} composites ready.\n")
@@ -401,11 +459,20 @@ def main():
         if args.shot:
             # Single shot — run directly
             print(f"Phase 2 — Video: generating {args.shot}...\n")
-            sid, ok, err = run_video(
-                video_shots[0],
-                composite_urls[video_shots[0]["shot_id"]],
-                Path("clips") / f"{video_shots[0]['shot_id']}.mp4",
-            )
+            sid = video_shots[0]["shot_id"]
+            comp_url = composite_urls[sid]
+            
+            # If composite was local, we need to upload it to get a URL for Grok
+            if comp_url == "local":
+                IMGBB_API_KEY = get_key("IMGBB_API_KEY")
+                tprint(f"  [{sid}] uploading local composite to imgbb...")
+                comp_url = upload_to_imgbb(Path("composites") / f"{sid}.png", IMGBB_API_KEY)
+                if not comp_url:
+                    print(f"  [{sid}] failed to upload composite")
+                    results["failed"].append(sid)
+                    return
+
+            sid, ok, err = run_video(video_shots[0], comp_url, Path("clips") / f"{sid}.mp4")
             if ok:
                 results["success"].append(sid)
             else:
@@ -415,15 +482,36 @@ def main():
             # Bulk — all videos in parallel
             print(f"Phase 2 — Videos: submitting {len(video_shots)} jobs in parallel "
                   f"(grok-imagine/image-to-video)...\n")
+            
+            # Helper to ensure URL exists before submitting to thread pool
+            def get_comp_url(sid):
+                url = composite_urls[sid]
+                if url == "local":
+                    key = get_key("IMGBB_API_KEY")
+                    tprint(f"  [{sid}] uploading local composite to imgbb...")
+                    res = upload_to_imgbb(Path("composites") / f"{sid}.png", key)
+                    if not res:
+                        tprint(f"  [{sid}] failed to upload composite")
+                    return res
+                return url
+
             with ThreadPoolExecutor(max_workers=VIDEO_MAX_WORKERS) as ex:
+                # Prepare URLs first (sequential naturally, but could be threaded)
+                final_urls = {}
+                for s in video_shots:
+                    u = get_comp_url(s["shot_id"])
+                    if u: final_urls[s["shot_id"]] = u
+                
+                valid_video_shots = [s for s in video_shots if s["shot_id"] in final_urls]
+                
                 futures = {
                     ex.submit(
                         run_video,
                         shot,
-                        composite_urls[shot["shot_id"]],
+                        final_urls[shot["shot_id"]],
                         Path("clips") / f"{shot['shot_id']}.mp4"
                     ): shot["shot_id"]
-                    for shot in video_shots
+                    for shot in valid_video_shots
                 }
                 for future in as_completed(futures):
                     sid, ok, err = future.result()

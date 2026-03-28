@@ -1,0 +1,83 @@
+{
+  "backgrounds": [
+    {
+      "bg_id": "bg_001",
+      "name": "Elementary School Art Classroom",
+      "description": "Bright, colorful interior classroom with student artwork on walls, wooden desks, and art supplies",
+      "prompt": "A bright and colorful elementary school art classroom interior. Large windows along one wall let in warm morning sunlight casting golden rays across the room. Small wooden desks are arranged in groups of four with tiny chairs. The walls are covered in colorful student drawings, paintings, and paper collages pinned to corkboards. A long teacher's desk at the front has containers of pencils, paintbrushes, and crayon boxes. Shelves along the back wall hold clay sculptures, folded paper crafts, and art books. The floor is light hardwood. The overhead lights add a warm yellow glow supplementing the natural light. The atmosphere is cheerful, creative, and child-friendly. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11
+      ],
+      "image_url": "https://i.ibb.co/B5bRP5fy/9dcdcd25b16b.png"
+    },
+    {
+      "bg_id": "bg_002",
+      "name": "Art Supplies Table Close-Up Station",
+      "description": "Close-up view of a student table covered with art materials — pencils, crayons, colored paper, scissors, glue",
+      "prompt": "A close-up view of a small wooden elementary school student desk covered with colorful art supplies. Scattered across the surface are sharpened pencils, a box of wax crayons in bright colors, sheets of vivid colored paper, child-safety scissors with orange handles, a purple glue stick, and a half-finished paper collage. A small glass jar of water with a paintbrush sits to one side. The desk surface shows faint pencil marks and a few dried paint smudges from past projects. The background softly blurs into the warm yellow-lit classroom. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        3,
+        5
+      ],
+      "image_url": "https://i.ibb.co/XkxhRMsd/eeff36ed0a1d.png"
+    },
+    {
+      "bg_id": "bg_003",
+      "name": "Recycled Materials Art Station",
+      "description": "A creative station with a large bin of recycled materials and a half-finished cardboard robot sculpture",
+      "prompt": "An art station inside a colorful elementary school classroom, specifically set up for a recycled materials project. A large transparent plastic bin sits on a wide table overflowing with recycled items: cardboard tubes, plastic bottles, folded newspaper, bottle caps, egg cartons, and yarn scraps. On the table beside the bin sits a half-finished cardboard robot sculpture about 30cm tall, painted silver with googly eyes and a foil zigzag mouth. A finished plastic-bottle owl with colored paper feathers and bottle-cap eyes stands upright nearby. The table has craft supply smears of paint and glue. Shelves in the background hold similar works in progress. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        4
+      ],
+      "image_url": "https://i.ibb.co/j95CXr2N/c8aa59c8e308.png"
+    },
+    {
+      "bg_id": "bg_004",
+      "name": "Art Concept Poster Wall",
+      "description": "A large illustrated wall poster showing different art professions — sculptor, fashion designer, painter",
+      "prompt": "A large, colorful illustrated educational poster mounted on a school classroom wall. The poster is divided into three illustrated sections: on the left, a sculptor in a studio chiseling a clay bust; in the center, a fashion designer sketching clothing on a mannequin surrounded by fabric swatches; on the right, a painter standing before a large canvas holding a palette. Each section has bold, cheerful typography labels in English and Vietnamese. The poster is bordered with a bright rainbow frame and pinned to a light cream-colored classroom wall. Below it sits a small chalk ledge. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        6
+      ],
+      "image_url": "https://i.ibb.co/jvXbHN2J/59cb94745117.png"
+    },
+    {
+      "bg_id": "bg_005",
+      "name": "Sunny Outdoor Park",
+      "description": "A beautiful sunny park with benches, trees, and a peaceful atmosphere for outdoor painting",
+      "prompt": "A beautiful and serene outdoor public park on a warm sunny afternoon. Lush green grass stretches across a gentle slope. A large old oak tree with wide spreading branches provides dappled shade. A wooden park bench sits beneath it, surrounded by blooming flower beds in red, yellow, and purple. In the mid-ground, children play in the background near a fountain. The sky is a brilliant pale blue with soft white cumulus clouds. Golden afternoon sun casts warm long shadows across the grass. A small wooden easel stands near the bench. The whole scene has a peaceful, timeless quality. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        7
+      ],
+      "image_url": "https://i.ibb.co/VYzjbSFW/647bd818c833.png"
+    },
+    {
+      "bg_id": "bg_006",
+      "name": "School Garden and Courtyard",
+      "description": "A lush school garden courtyard with blooming flowers, an old tree, and a water fountain for outdoor drawing class",
+      "prompt": "A lush and charming elementary school outdoor courtyard used for open-air art classes. A large ancient tree with a thick gnarled trunk anchors the center of the garden, its wide canopy providing cool afternoon shade. Surrounding it are organized flower beds bursting with colorful blooms — red roses, yellow sunflowers, and purple lavender. A small stone water fountain bubbles quietly in one corner. Flat stepping-stone paths wind through the garden. Small portable art stools are scattered around as if a class just sat down to sketch. The sky above is bright blue, and afternoon light filters softly between the leaves. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        9
+      ],
+      "image_url": "https://i.ibb.co/ymg4VcN6/00011872d9aa.png"
+    },
+    {
+      "bg_id": "bg_007",
+      "name": "Classroom Art Wall Display",
+      "description": "A full wall of student artwork — drawings, collages, clay sculptures, and paintings — displayed proudly",
+      "prompt": "A vibrant and celebratory classroom art wall display inside an elementary school. The entire back wall is covered floor-to-ceiling with student artwork: colorful crayon drawings of animals and landscapes, paper collages of cities and nature, painted portraits, small clay figurines on a narrow shelf ledge, and cut-and-paste paper scenes. Each piece is neatly pinned or taped and labeled with a child's name on a small card. The wall itself is a warm cream color. Bright hanging pennant bunting in red, yellow, and blue stretches across the top of the display. Natural late-afternoon light from nearby windows warms the scene with a golden glow. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "scenes_used_in": [
+        11
+      ],
+      "image_url": "https://i.ibb.co/CKjjB5XX/98f23f43966c.png"
+    }
+  ]
+}

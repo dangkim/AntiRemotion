@@ -1,0 +1,59 @@
+{
+  "characters": [
+    {
+      "character_id": "char_001",
+      "name": "Minh",
+      "description": "Cheerful, bright-eyed 6-year-old Vietnamese boy, main narrator who loves showing off his art",
+      "prompt": "A cheerful 6-year-old Vietnamese boy named Minh, short straight black hair, warm light brown skin, big expressive dark brown eyes, rosy cheeks, a wide joyful smile. Wearing a light blue short-sleeve school uniform shirt with a small collar and dark navy shorts. White sneakers with velcro straps. A small red backpack on his back. He stands in an energetic, welcoming pose with one hand raised in a wave and the other on his hip. Neutral full-body front-facing reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
+      "scenes_appearing": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "image_url": "https://i.ibb.co/GQLtMbJY/1c24a90b7462.png"
+    },
+    {
+      "character_id": "char_002",
+      "name": "Ms. Lan",
+      "description": "Warm and encouraging art teacher in her 30s, wearing a paint-splattered apron",
+      "prompt": "A warm and encouraging Vietnamese female art teacher named Ms. Lan, in her early 30s. Slim build, light tan skin, shoulder-length straight black hair tucked behind one ear, soft dark eyes with a kind and patient expression. Wearing a white blouse underneath a paint-splattered cream-colored canvas apron. Dark green slacks and low-heeled flat shoes. She holds a paint brush gently in one hand. Her pose is welcoming and calm — slight forward lean, soft smile. Neutral full-body front-facing reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
+      "scenes_appearing": [
+        2,
+        8,
+        11
+      ],
+      "image_url": "https://i.ibb.co/6R4dgP04/3d64f8099ea7.png"
+    },
+    {
+      "character_id": "char_003",
+      "name": "Lena",
+      "description": "Minh's creative and slightly shy classmate, a 6-year-old girl with pigtails and a yellow dress",
+      "prompt": "A creative and slightly shy 6-year-old girl named Lena, Minh's classmate. Light brown skin, large expressive dark eyes with long lashes, two neat pigtails tied with small yellow ribbons. Wearing a cheerful yellow sundress over a white long-sleeve undershirt, white stockings, and small white Mary Jane shoes. Holding a sketchbook to her chest with both arms, looking slightly sideways with a small proud smile. Neutral full-body front-facing reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
+      "scenes_appearing": [
+        3,
+        4,
+        9,
+        11
+      ],
+      "image_url": "https://i.ibb.co/FLmkWFP4/88d8013c466d.png"
+    },
+    {
+      "character_id": "char_004",
+      "name": "Grandpa Nam",
+      "description": "Kind elderly Vietnamese man in his 70s, an art lover who paints outdoors",
+      "prompt": "A kind elderly Vietnamese man named Grandpa Nam, in his early 70s. Slightly hunched gentle posture, warm medium-tan wrinkled skin, short neatly combed silver-white hair, small kind dark eyes framed by deep smile wrinkles. Wearing a loose light linen button-up shirt in pale ivory, comfortable beige trousers, and worn brown leather sandals. Seated on a folding wooden stool, holding a fine paintbrush up to a small canvas on an easel beside him. His expression is serene and content. Neutral full-body side-angled reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
+      "scenes_appearing": [
+        7
+      ],
+      "image_url": "https://i.ibb.co/C5CdsLsV/73df36ffe84f.png"
+    }
+  ]
+}
