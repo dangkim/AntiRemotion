@@ -40,7 +40,7 @@ def check_ffmpeg() -> bool:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print("\n=== Story-to-Animation: Merge Clips → final_animation.mp4 ===\n")
+    print("\n=== Story-to-Animation: Merge Clips → final_animation_vn.mp4 ===\n")
 
     # ── Check FFmpeg ──────────────────────────────────────────────────────────
     if not check_ffmpeg():
@@ -86,26 +86,55 @@ def main():
         raise SystemExit(1)
 
     if len(available) == 1:
-        print("Only one clip found — copying directly to final_animation.mp4")
+        print("Only one clip found — copying directly to final_animation_vn.mp4")
         import shutil
-        shutil.copy2(available[0][1], "final_animation.mp4")
-        print("✅ Done → ./final_animation.mp4")
+        shutil.copy2(available[0][1], "final_animation_vn.mp4")
+        print("✅ Done → ./final_animation_vn.mp4")
         return
+
+    # ── Mix Audio ─────────────────────────────────────────────────────────────
+    audio_clips_dir = Path("clips_with_audio")
+    audio_clips_dir.mkdir(exist_ok=True)
+    
+    mixed_available = []
+    print("Mixing Edge-TTS audio into clips...")
+    for sid, clip_path in available:
+        audio_path = Path("audio") / f"{sid}.mp3"
+        mixed_path = audio_clips_dir / f"{sid}.mp4"
+        
+        if audio_path.exists():
+            if not mixed_path.exists():
+                cmd = [
+                    "ffmpeg", "-y",
+                    "-i", str(clip_path),
+                    "-i", str(audio_path),
+                    "-filter_complex", "[1:a]apad[A]",
+                    "-map", "0:v:0",
+                    "-map", "[A]",
+                    "-c:v", "copy",
+                    "-c:a", "aac",
+                    "-shortest",
+                    str(mixed_path)
+                ]
+                subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            mixed_available.append((sid, mixed_path))
+        else:
+            mixed_available.append((sid, clip_path))
 
     # ── Write FFmpeg concat list ──────────────────────────────────────────────
     concat_path = Path("concat.txt")
     with open(concat_path, "w", encoding="utf-8") as f:
-        for sid, clip_path in available:
+        for sid, clip_path in mixed_available:
             # Use forward-slash absolute path (safe on all platforms)
             abs_path = clip_path.resolve().as_posix()
             f.write(f"file '{abs_path}'\n")
 
-    print(f"Merging {len(available)} clips in order:")
-    for sid, _ in available:
-        print(f"  {sid}.mp4")
+    print(f"\nMerging {len(mixed_available)} clips in order:")
+    for sid, _ in mixed_available:
+        print(f"  {sid}")
     print()
 
-    output_path = Path("final_animation.mp4")
+    output_path = Path("final_animation_vn.mp4")
 
     # ── Run FFmpeg ────────────────────────────────────────────────────────────
     cmd = [
@@ -133,9 +162,9 @@ def main():
     size_mb = output_path.stat().st_size / (1024 * 1024)
 
     print(f"{'='*50}")
-    print(f"  ✅ Output   : ./final_animation.mp4")
+    print(f"  ✅ Output   : ./final_animation_vn.mp4")
     print(f"     Size     : {size_mb:.1f} MB")
-    print(f"     Merged   : {len(available)} clips")
+    print(f"     Merged   : {len(mixed_available)} clips (with audio)")
     if missing:
         print(f"     Skipped  : {len(missing)} missing  ({', '.join(missing)})")
     print(f"{'='*50}")
