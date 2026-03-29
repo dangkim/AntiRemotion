@@ -10,11 +10,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh runs into the bright art classroom, stops, and waves excitedly at the camera.",
+      "action": "Minh runs into the bright art classroom, stops, and waves excitedly at the camera. with other students visible in the background",
       "camera_movement": "Wide shot, static, then medium shot on Minh",
       "dialogue": "Hi! I'm Minh! Today I'm going to show you my FAVORITE class — Art!",
       "mood": "Joyful and energetic",
-      "veo_prompt": "Pixar-style 3D animation, wide shot establishing a bright school art classroom with colorful drawings on walls, a 6-year-old Vietnamese boy with short black hair and a light blue school uniform runs into the center, stops, and waves with a huge grin, warm morning sunlight, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, wide shot establishing a bright school art classroom with colorful drawings on walls, a 6-year-old Vietnamese boy with short black hair and a light blue school uniform runs into the center, stops, and waves with a huge grin, warm morning sunlight, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Chào các bạn! Mình là Minh! Hôm nay mình sẽ giới thiệu cho các bạn tiết học YÊU THÍCH nhất của mình — Mỹ thuật!"
     },
     {
@@ -27,11 +27,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh spins around with arms wide, then holds up a finger knowingly.",
+      "action": "Minh spins around with arms wide, then holds up a finger knowingly. with other students visible in the background",
       "camera_movement": "Medium shot, slow tracking as he spins",
       "dialogue": "In art class, we learn about something really cool… called ART PRODUCTS!",
       "mood": "Enthusiastic and mysterious",
-      "veo_prompt": "Pixar-style 3D animation, medium shot of a 6-year-old Vietnamese boy in a blue uniform spinning joyfully with arms wide in a colorful classroom, he stops and holds up one finger with a playful, knowing expression, bright and cheerful atmosphere, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, medium shot of a 6-year-old Vietnamese boy in a blue uniform spinning joyfully with arms wide in a colorful classroom, he stops and holds up one finger with a playful, knowing expression, bright and cheerful atmosphere, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Trong giờ mỹ thuật, chúng mình được học về một điều cực kỳ thú vị... đó là SẢN PHẨM MỸ THUẬT!"
     },
     {
@@ -45,11 +45,11 @@
         "char_002"
       ],
       "background": "bg_001",
-      "action": "C� H�a points to the art board; Minh points to his butterfly painting proudly.",
+      "action": "Cô Hòa points to the art board; Minh points to his butterfly painting proudly. with other students visible in the background",
       "camera_movement": "Medium two-shot, panning to the artwork",
       "dialogue": "That one's MINE! I made that last week!",
       "mood": "Educational and proud",
-      "veo_prompt": "Pixar-style 3D animation, medium two-shot of a kind Vietnamese art teacher in a paint-splattered apron pointing at a corkboard of art, beside her a 6-year-old boy points excitedly at a colorful watercolor butterfly painting, proud expressions, soft classroom lighting, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, medium two-shot of a kind Vietnamese art teacher in a paint-splattered apron pointing at a corkboard of art, beside her a 6-year-old boy points excitedly at a colorful watercolor butterfly painting, proud expressions, soft classroom lighting, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background, featuring Cô Hòa, a Vietnamese teacher in her late 40s wearing a light blue patterned Áo Dài with purple trousers",
       "dialogue_vn": "Bức tranh đó là của MÌNH đấy! Mình đã vẽ nó vào tuần trước!"
     },
     {
@@ -62,11 +62,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh explains visual art, pointing to a clay bird on a shelf.",
+      "action": "Minh explains visual art, pointing to a clay bird on a shelf. with other students visible in the background",
       "camera_movement": "Close-up on Minh, then pan to the clay bird",
       "dialogue": "Visual Art means… things we make that you LOOK at. Like paintings. And drawings. And — sculptures!",
       "mood": "Instructive and happy",
-      "veo_prompt": "Pixar-style 3D animation, close-up of a cheerful 6-year-old boy talking and gesturing, camera pans to show a small clay bird sculpture on a wooden shelf in a sunlit classroom, vibrant colors, clear and detailed rendering, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, close-up of a cheerful 6-year-old boy talking and gesturing, camera pans to show a small clay bird sculpture on a wooden shelf in a sunlit classroom, vibrant colors, clear and detailed rendering, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Mỹ thuật tạo hình nghĩa là... những thứ chúng mình làm ra để các bạn NGẮM nhìn. Như tranh vẽ này, hình vẽ này, và cả — những bức tượng nữa!"
     },
     {
@@ -81,7 +81,7 @@
       "background": "bg_002",
       "action": "Minh scribbles a bright yellow sun with a crayon.",
       "camera_movement": "Extreme close-up on hands and paper",
-      "dialogue": "C� H�a also teaches us how to USE all the materials! Like crayons…",
+      "dialogue": "Cô Hòa also teaches us how to USE all the materials! Like crayonsâ¦",
       "mood": "Creative and focused",
       "veo_prompt": "Pixar-style 3D animation, extreme close-up of a child's hands using a bright yellow wax crayon to draw a sun on a white sheet of paper, scattered pencils and art supplies on a wooden table in the background, high detail, 8 seconds",
       "dialogue_vn": "Cô Lan còn dạy chúng mình cách SỬ DỤNG tất cả các loại vật liệu nữa! Như là bút màu sáp..."
@@ -200,11 +200,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh turns to camera and points at himself, then at the viewer.",
+      "action": "Minh turns to camera and points at himself, then at the viewer. with other students visible in the background",
       "camera_movement": "Medium close-up on Minh",
       "dialogue": "But actually? Art is made by… ART LOVERS! Anyone who loves art can make it!",
       "mood": "Inclusive and inspiring",
-      "veo_prompt": "Pixar-style 3D animation, medium close-up of a 6-year-old Vietnamese boy with a bright smile, he points to himself and then points directly at the camera with a welcoming gesture, soft cinematic lighting, encouraging mood, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, medium close-up of a 6-year-old Vietnamese boy with a bright smile, he points to himself and then points directly at the camera with a welcoming gesture, soft cinematic lighting, encouraging mood, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Nhưng thực ra? Nghệ thuật được tạo ra bởi... NHỮNG NGƯỜI YÊU NGHỆ THUẬT! Bất cứ ai yêu nghệ thuật đều có thể làm ra nó!"
     },
     {
@@ -254,11 +254,11 @@
         "char_002"
       ],
       "background": "bg_001",
-      "action": "Minh draws a house; C� H�a offers guidance from behind.",
+      "action": "Minh draws a house; Cô Hòa offers guidance from behind. with other students visible in the background",
       "camera_movement": "High angle shot looking down at the desk",
-      "dialogue": "We draw in the classroom! C� H�a teaches us how to see things… and put them on paper.",
+      "dialogue": "We draw in the classroom! Cô Hòa teaches us how to see thingsâ¦ and put them on paper.",
       "mood": "Calm and focused",
-      "veo_prompt": "Pixar-style 3D animation, high angle view of a 6-year-old boy sketching a house in a sketchbook at a classroom desk, a kind teacher in an apron leans in to give gentle advice, soft golden afternoon light, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, high angle view of a 6-year-old boy sketching a house in a sketchbook at a classroom desk, a kind teacher in an apron leans in to give gentle advice, soft golden afternoon light, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background, featuring Cô Hòa, a Vietnamese teacher in her late 40s wearing a light blue patterned Áo Dài with purple trousers",
       "dialogue_vn": "Chúng mình vẽ tranh ngay tại lớp học! Cô Lan dạy chúng mình cách quan sát mọi thứ... và thể hiện chúng lên trang giấy."
     },
     {
@@ -271,11 +271,11 @@
         "char_001"
       ],
       "background": "bg_006",
-      "action": "Minh shows his sketch of a large tree while sitting in the garden.",
+      "action": "Minh shows his sketch of a large tree while sitting in the garden. with other students visible in the background",
       "camera_movement": "Medium shot panning the outdoor class",
       "dialogue": "And sometimes… we go OUTSIDE to draw!",
       "mood": "Joyful and free",
-      "veo_prompt": "Pixar-style 3D animation, a group of children sitting on stools in a lush school garden with a large tree and fountain, a 6-year-old boy holds up his sketchbook showing a bold drawing of the tree, bright daylight, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, a group of children sitting on stools in a lush school garden with a large tree and fountain, a 6-year-old boy holds up his sketchbook showing a bold drawing of the tree, bright daylight, 8 seconds, with many students sitting on stools and sketching in the background",
       "dialogue_vn": "Và thỉnh thoảng... chúng mình còn ra NGOÀI TRỜI để vẽ nữa!"
     },
     {
@@ -288,11 +288,11 @@
         "char_003"
       ],
       "background": "bg_006",
-      "action": "A butterfly lands on Lena's sketchbook; she freezes and smiles.",
+      "action": "A butterfly lands on Lena's sketchbook; she freezes and smiles. with other students visible in the background",
       "camera_movement": "Close-up on Lena and the sketchbook",
       "dialogue": "Outside is the BEST because nature gives you so many things to draw.",
       "mood": "Wonder and stillness",
-      "veo_prompt": "Pixar-style 3D animation, close-up of a 6-year-old girl with pigtails holding her sketchbook still as a colorful butterfly lands on the page, she has a magical, gentle smile, flowers in the blurred garden background, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, close-up of a 6-year-old girl with pigtails holding her sketchbook still as a colorful butterfly lands on the page, she has a magical, gentle smile, flowers in the blurred garden background, 8 seconds, with many students sitting on stools and sketching in the background",
       "dialogue_vn": "Vẽ ở ngoài trời là TUYỆT nhất vì thiên nhiên mang lại cho chúng mình rất nhiều cảm hứng để vẽ."
     },
     {
@@ -305,11 +305,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh picks up crayons and draws a rainbow with joyful energy.",
+      "action": "Minh picks up crayons and draws a rainbow with joyful energy. with other students visible in the background",
       "camera_movement": "Medium close-up, focusing on the drawing and Minh's happy face",
       "dialogue": "Crayons: For COLOR!",
       "mood": "Joyful and enthusiastic",
-      "veo_prompt": "Pixar-style 3D animation, medium close-up of a cheerful 6-year-old Vietnamese boy with short straight black hair and a light blue school uniform, he is happily and enthusiastically drawing a vibrant rainbow with different colored crayons on a white paper, big joyful smile, bright and colorful art classroom, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, medium close-up of a cheerful 6-year-old Vietnamese boy with short straight black hair and a light blue school uniform, he is happily and enthusiastically drawing a vibrant rainbow with different colored crayons on a white paper, big joyful smile, bright and colorful art classroom, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Bút màu sáp: Để tạo ra MÀU SẮC!"
     },
     {
@@ -322,11 +322,11 @@
         "char_001"
       ],
       "background": "bg_001",
-      "action": "Minh holds up a paintbrush dramatically and looks satisfied.",
+      "action": "Minh holds up a paintbrush dramatically and looks satisfied. with other students visible in the background",
       "camera_movement": "Medium close-up",
       "dialogue": "And THIS — is for REAL paintings!",
       "mood": "Satisfied and expert",
-      "veo_prompt": "Pixar-style 3D animation, medium close-up of a 6-year-old boy holding up a clean paintbrush like a hero's sword, he has a satisfied and confident expression, art classroom background with paint tubes and clay, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, medium close-up of a 6-year-old boy holding up a clean paintbrush like a hero's sword, he has a satisfied and confident expression, art classroom background with paint tubes and clay, 8 seconds, with diverse 6-year-old students sitting at desks and busy with art projects in the background",
       "dialogue_vn": "Và ĐÂY — là dành cho những bức họa định cao!"
     },
     {
@@ -345,7 +345,7 @@
       "camera_movement": "Very slow pull-back wide shot",
       "dialogue": "And THAT… is Art class. Visual art. Applied art. Pencils, crayons, clay, paper, paint…",
       "mood": "Triumphant and collective",
-      "veo_prompt": "Pixar-style 3D animation, wide shot pulling back to reveal a group of happy children and their teacher standing in front of a wall covered in their artwork, paintings, collages, and drawings, bright and celebratory lighting, 8 seconds",
+      "veo_prompt": "Pixar-style 3D animation, wide shot pulling back to reveal a group of happy children and their teacher standing in front of a wall covered in their artwork, paintings, collages, and drawings, bright and celebratory lighting, 8 seconds, featuring Cô Hòa, a Vietnamese teacher in her late 40s wearing a light blue patterned Áo Dài with purple trousers",
       "dialogue_vn": "Và ĐÓ... chính là giờ Mỹ thuật. Mỹ thuật tạo hình. Mỹ thuật ứng dụng. Bút chì, màu sáp, đất sét, giấy, sơn..."
     },
     {
