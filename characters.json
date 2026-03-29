@@ -22,15 +22,15 @@
     },
     {
       "character_id": "char_002",
-      "name": "Ms. Lan",
-      "description": "Warm and encouraging art teacher in her 30s, wearing a paint-splattered apron",
-      "prompt": "A warm and encouraging Vietnamese female art teacher named Ms. Lan, in her early 30s. Slim build, light tan skin, shoulder-length straight black hair tucked behind one ear, soft dark eyes with a kind and patient expression. Wearing a white blouse underneath a paint-splattered cream-colored canvas apron. Dark green slacks and low-heeled flat shoes. She holds a paint brush gently in one hand. Her pose is welcoming and calm — slight forward lean, soft smile. Neutral full-body front-facing reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
+      "name": "Cô Hòa",
+      "description": "Warm and encouraging Vietnamese art teacher in her 40s, wearing a traditional light blue patterned Áo Dài",
+      "prompt": "A kind Vietnamese female art teacher named Cô Hòa, in her late 40s. Slim build, light tan skin, long straight black hair, soft dark eyes with a kind and patient expression. She is wearing a traditional light blue patterned Áo Dài with purple wide-leg trousers and simple black flat shoes. Her pose is welcoming and calm — standing gracefully with a soft smile. Neutral full-body front-facing reference sheet pose. 3D animated character, Pixar-style rendering, full body, character reference sheet, white background, high detail, soft lighting.",
       "scenes_appearing": [
         2,
         8,
         11
       ],
-      "image_url": "https://i.ibb.co/6R4dgP04/3d64f8099ea7.png"
+      "image_url": "https://i.ibb.co/3YYXHkbs/ac471dec487a.png"
     },
     {
       "character_id": "char_003",

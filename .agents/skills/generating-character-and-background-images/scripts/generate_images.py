@@ -88,7 +88,7 @@ IMGBB_API_KEY = get_key("IMGBB_API_KEY")
 KIE_CREATE_URL   = "https://api.kie.ai/api/v1/jobs/createTask"
 KIE_STATUS_URL   = "https://api.kie.ai/api/v1/jobs/recordInfo"
 IMGBB_UPLOAD_URL = "https://api.imgbb.com/1/upload"
-MODEL            = "nano-banana-pro"
+MODEL            = "flux-2/pro-text-to-image"
 
 KIE_POST_HEADERS = {
     "Content-Type": "application/json",

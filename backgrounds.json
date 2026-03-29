@@ -3,8 +3,8 @@
     {
       "bg_id": "bg_001",
       "name": "Elementary School Art Classroom",
-      "description": "Bright, colorful interior classroom with student artwork on walls, wooden desks, and art supplies",
-      "prompt": "A bright and colorful elementary school art classroom interior. Large windows along one wall let in warm morning sunlight casting golden rays across the room. Small wooden desks are arranged in groups of four with tiny chairs. The walls are covered in colorful student drawings, paintings, and paper collages pinned to corkboards. A long teacher's desk at the front has containers of pencils, paintbrushes, and crayon boxes. Shelves along the back wall hold clay sculptures, folded paper crafts, and art books. The floor is light hardwood. The overhead lights add a warm yellow glow supplementing the natural light. The atmosphere is cheerful, creative, and child-friendly. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "description": "Bright, colorful interior classroom filled with 6-year-old students at their desks",
+      "prompt": "A bright and colorful elementary school art classroom interior, filled with a lively class of twelve diverse 6-year-old students sitting at their grouped desks. The students are busy with various art projects, adding a bustling and energetic school atmosphere. They are slightly out of focus in the background. Large windows let in warm morning sunlight casting golden rays. The walls are covered in student drawings. Small wooden desks are arranged in groups. The floor is light hardwood. 3D animated environment, cinematic wide shot, background characters present, high detail, Pixar-style rendering.",
       "scenes_used_in": [
         1,
         2,
@@ -16,7 +16,7 @@
         10,
         11
       ],
-      "image_url": "https://i.ibb.co/B5bRP5fy/9dcdcd25b16b.png"
+      "image_url": "https://i.ibb.co/Z6gX4L0n/385a6c9f801b.png"
     },
     {
       "bg_id": "bg_002",
@@ -62,12 +62,12 @@
     {
       "bg_id": "bg_006",
       "name": "School Garden and Courtyard",
-      "description": "A lush school garden courtyard with blooming flowers, an old tree, and a water fountain for outdoor drawing class",
-      "prompt": "A lush and charming elementary school outdoor courtyard used for open-air art classes. A large ancient tree with a thick gnarled trunk anchors the center of the garden, its wide canopy providing cool afternoon shade. Surrounding it are organized flower beds bursting with colorful blooms — red roses, yellow sunflowers, and purple lavender. A small stone water fountain bubbles quietly in one corner. Flat stepping-stone paths wind through the garden. Small portable art stools are scattered around as if a class just sat down to sketch. The sky above is bright blue, and afternoon light filters softly between the leaves. 3D animated environment, cinematic wide shot, no characters, high detail, Pixar-style rendering.",
+      "description": "A lush school garden courtyard filled with students sketching outdoors",
+      "prompt": "A lush and charming elementary school outdoor courtyard filled with a class of students scattered around. The students are sitting on portable art stools, sketching and painting the scenery. They are slightly blurred in the mid-ground, providing a sense of a busy outdoor art session. A large ancient tree anchors the center, providing cool shade. Blooming flower beds in various colors. Step-stone paths wind through the garden. The sky is bright blue with soft light filtering through leaves. 3D animated environment, cinematic wide shot, background characters present, high detail, Pixar-style rendering.",
       "scenes_used_in": [
         9
       ],
-      "image_url": "https://i.ibb.co/ymg4VcN6/00011872d9aa.png"
+      "image_url": "https://i.ibb.co/qLSMtxQV/30d8c5c24a8e.png"
     },
     {
       "bg_id": "bg_007",

@@ -45,7 +45,7 @@
         "char_002"
       ],
       "background": "bg_001",
-      "action": "Ms. Lan points to the art board; Minh points to his butterfly painting proudly.",
+      "action": "C� H�a points to the art board; Minh points to his butterfly painting proudly.",
       "camera_movement": "Medium two-shot, panning to the artwork",
       "dialogue": "That one's MINE! I made that last week!",
       "mood": "Educational and proud",
@@ -81,7 +81,7 @@
       "background": "bg_002",
       "action": "Minh scribbles a bright yellow sun with a crayon.",
       "camera_movement": "Extreme close-up on hands and paper",
-      "dialogue": "Ms. Lan also teaches us how to USE all the materials! Like crayons…",
+      "dialogue": "C� H�a also teaches us how to USE all the materials! Like crayons…",
       "mood": "Creative and focused",
       "veo_prompt": "Pixar-style 3D animation, extreme close-up of a child's hands using a bright yellow wax crayon to draw a sun on a white sheet of paper, scattered pencils and art supplies on a wooden table in the background, high detail, 8 seconds",
       "dialogue_vn": "Cô Lan còn dạy chúng mình cách SỬ DỤNG tất cả các loại vật liệu nữa! Như là bút màu sáp..."
@@ -254,9 +254,9 @@
         "char_002"
       ],
       "background": "bg_001",
-      "action": "Minh draws a house; Ms. Lan offers guidance from behind.",
+      "action": "Minh draws a house; C� H�a offers guidance from behind.",
       "camera_movement": "High angle shot looking down at the desk",
-      "dialogue": "We draw in the classroom! Ms. Lan teaches us how to see things… and put them on paper.",
+      "dialogue": "We draw in the classroom! C� H�a teaches us how to see things… and put them on paper.",
       "mood": "Calm and focused",
       "veo_prompt": "Pixar-style 3D animation, high angle view of a 6-year-old boy sketching a house in a sketchbook at a classroom desk, a kind teacher in an apron leans in to give gentle advice, soft golden afternoon light, 8 seconds",
       "dialogue_vn": "Chúng mình vẽ tranh ngay tại lớp học! Cô Lan dạy chúng mình cách quan sát mọi thứ... và thể hiện chúng lên trang giấy."

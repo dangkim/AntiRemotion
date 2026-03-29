@@ -5,7 +5,7 @@ A curious and energetic 6-year-old boy named Minh takes us on a fun, colorful to
 
 ## Characters
 - **Minh**: A cheerful, bright-eyed 6-year-old Vietnamese boy with short black hair, wearing a light blue school uniform. Enthusiastic, expressive, and loves showing off his art. Main narrator.
-- **Ms. Lan**: A warm and encouraging female art teacher in her 30s, wearing a paint-splattered apron over a white blouse. Kind smile, always supportive.
+- **Cô Hòa**: A warm and encouraging female art teacher in her 30s, wearing a paint-splattered apron over a white blouse. Kind smile, always supportive.
 - **Lena**: Minh's classmate, a 6-year-old girl with pigtails and a yellow dress, creative and a little shy but very talented.
 - **Grandpa Nam**: An elderly man in his 70s with kind wrinkles and silver hair, seen painting outdoors â€” symbolizing that art is for everyone.
 
@@ -32,13 +32,13 @@ He holds up a finger knowingly, as if sharing a great secret.
 ---
 
 ## Scene 2: What Is Visual Art?
-**Location**: Same classroom. Ms. Lan stands before a corkboard displaying paintings, drawings, and prints made by students.
-**Characters**: Minh, Ms. Lan
+**Location**: Same classroom. Cô Hòa stands before a corkboard displaying paintings, drawings, and prints made by students.
+**Characters**: Minh, Cô Hòa
 **Time of Day**: Morning
 
-Ms. Lan points to the corkboard with a gentle smile.
+Cô Hòa points to the corkboard with a gentle smile.
 
-**Ms. Lan**: "In art class, we start by learning about Visual Art â€” paintings, drawings, and prints that you can see and admire."
+**Cô Hòa**: "In art class, we start by learning about Visual Art â€” paintings, drawings, and prints that you can see and admire."
 
 Minh points at a small watercolor painting of a butterfly pinned to the board.
 
@@ -48,7 +48,7 @@ He beams proudly. Then he gets serious (in an adorably exaggerated way).
 
 **Minh**: "Visual Art meansâ€¦ things we make that you LOOK at. Like paintings. And drawings. And â€” " he points at a sculpted clay bird on the shelf â€” "sculptures!"
 
-**Shot Notes**: Wide shot of Ms. Lan and the board, then cut to Minh pointing at his butterfly painting. Close-up on the artwork, then back to Minh's proud face.
+**Shot Notes**: Wide shot of Cô Hòa and the board, then cut to Minh pointing at his butterfly painting. Close-up on the artwork, then back to Minh's proud face.
 **Tone**: Warm, educational, proud.
 
 ---
@@ -60,7 +60,7 @@ He beams proudly. Then he gets serious (in an adorably exaggerated way).
 
 Minh picks up a crayon and holds it up like a trophy.
 
-**Minh**: "Ms. Lan also teaches us how to USE all the materials! Like crayonsâ€¦"
+**Minh**: "Cô Hòa also teaches us how to USE all the materials! Like crayonsâ€¦"
 
 He scribbles a quick bright yellow sun on paper.
 
@@ -164,15 +164,15 @@ Grandpa Nam smiles warmly and hands Minh a small brush.
 ---
 
 ## Scene 8: Drawing in the Classroom
-**Location**: Inside the school classroom. The afternoon sun casts long golden shadows. Students sit at tables sketching. Ms. Lan walks between them, offering gentle guidance.
-**Characters**: Minh, Ms. Lan, Lena
+**Location**: Inside the school classroom. The afternoon sun casts long golden shadows. Students sit at tables sketching. Cô Hòa walks between them, offering gentle guidance.
+**Characters**: Minh, Cô Hòa, Lena
 **Time of Day**: Afternoon
 
 Minh sits at his desk, pencil in hand, sketching a house with a garden. He narrates while drawing.
 
-**Minh**: "We draw in the classroom! Ms. Lan teaches us how to see thingsâ€¦ and put them on paper."
+**Minh**: "We draw in the classroom! Cô Hòa teaches us how to see thingsâ€¦ and put them on paper."
 
-Ms. Lan leans over and whispers something. Minh nods eagerly and adds a little cat to his drawing.
+Cô Hòa leans over and whispers something. Minh nods eagerly and adds a little cat to his drawing.
 
 Lena across the table is drawing a mermaid. She quietly shows it to Minh. He gives a big thumbs-up.
 
@@ -227,10 +227,10 @@ He sets the brush down and looks into the camera with wide, satisfied eyes.
 
 ## Scene 11: The Finished Masterpiece
 **Location**: The classroom art wall. All the students' work is pinned up â€” drawings, collages, clay sculptures, paper cuttings, paintings.
-**Characters**: Minh, Lena, Ms. Lan
+**Characters**: Minh, Lena, Cô Hòa
 **Time of Day**: Late Afternoon
 
-The entire class stands proudly in front of the art wall. Ms. Lan stands to the side, beaming.
+The entire class stands proudly in front of the art wall. Cô Hòa stands to the side, beaming.
 
 Minh steps forward and faces the camera one last time.
 
